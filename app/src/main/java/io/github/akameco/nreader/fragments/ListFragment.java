@@ -52,7 +52,7 @@ public class ListFragment extends Fragment {
 	}
 
 	private void fetchInitData() {
-		Novel novel = new Novel();
+		Novel novel = Novel.getInstance();
 		novel.fetchNovelList()
 			.observeOn(AndroidSchedulers.mainThread())
 			.subscribe(

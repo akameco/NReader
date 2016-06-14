@@ -8,7 +8,13 @@ import rx.Subscriber;
 import rx.schedulers.Schedulers;
 
 public class Novel {
-	public Novel() {
+	private static Novel novel = new Novel();
+
+	private Novel() {
+	}
+
+	public static Novel getInstance() {
+		return novel;
 	}
 
 	public Observable<List<narou4j.entities.Novel>> fetchNovelList() {
